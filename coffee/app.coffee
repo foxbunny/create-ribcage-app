@@ -8,5 +8,5 @@ requirejs.config
     app: '../app'
     tpl: '../tpl'
 
-# Start loading the main app file. Put all yoru applicaton logic in there.
+# Start loading the main app file. Put all your applicaton logic in there.
 requirejs ['app/main']
