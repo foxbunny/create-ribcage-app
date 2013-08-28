@@ -1,0 +1,58 @@
+/*jslint node: true */
+'use strict';
+
+var quietFlag = {'q': 'quiet'};
+
+var useConsole = function(namedArgs) {
+    return {useConsole: !namedArgs.quiet};
+};
+
+module.exports = {
+    clean: {
+        run: [
+            'v.rm www/js/app',
+            'v.rm www/js/app.js',
+            'v.rm www-built',
+        ]
+    },
+    compile: {
+        flags: quietFlag,
+        run: function(d, v, namedArgs) {
+            d.resolve(v.spawn(
+                'node',
+                ['node_modules/coffee-script/bin/coffee', '-o', 'www/js', 
+                '-bc', 'coffee'], 
+                useConsole(namedArgs)
+            ));
+        }
+    },
+    watch: {
+        flags: quietFlag,
+        run: function(d, v, namedArgs) {
+            d.resolve(v.spawn(
+                'node', 
+                ['node_modules/coffee-script/bin/coffee', '-o', 'www/js', 
+                '-bcw', 'coffee'], 
+                useConsole(namedArgs)
+            ));
+        }
+    },
+    serve: {
+        flags: quietFlag,
+        run: function(d, v, namedArgs) {
+            d.resolve(v.spawn(
+                'node',
+                ['tools/proxy.js'], 
+                useConsole(namedArgs)));
+        }  
+    },
+    build: {
+        flags: quietFlag,
+        depends: ['clean', 'compile', 'ccompile'],
+        run: function (d, v, namedArgs) {
+            d.resolve(v.spawn('node', ['tools/r.js', '-o', 'tools/build.js'],
+                useConsole(namedArgs)));
+        }
+    }
+
+};
