@@ -6,6 +6,10 @@ This is a [volo](http://volojs.org/)-compatible
 This template is based on the basic
 [create-template](https://github.com/volojs/create-template).
 
+This is a template for CoffeeScript development. There is
+[another template](https://github.com/foxbunny/create-ribcage-app-js) for
+people who do not want to use CoffeeScript.
+
 ## Directory layout
 
 * coffee/ - CoffeeScript sources
