@@ -1,10 +1,12 @@
-# Ribcage application template
+# Ribcage application template (CoffeeScript edition)
 
 This is a [volo](http://volojs.org/)-compatible
 [Ribcage](https://github.com/foxbunny/ribcage) web application template.
 
 This template is based on the basic
 [create-template](https://github.com/volojs/create-template).
+
+## JavaScript edition
 
 This is a template for CoffeeScript development. There is
 [another template](https://github.com/foxbunny/create-ribcage-app-js) for
