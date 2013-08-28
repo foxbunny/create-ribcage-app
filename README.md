@@ -36,6 +36,10 @@ To create a project using volo, run:
 Volo will take care of installing all dependencies, so you can skip that part
 in the next section.
 
+When asked about `jquery.soap` and `jquery.xml2json` dependencies and exports,
+simply accept the defaults. You can also remove them later if you wish but you
+will need to adjust some of the default code for the app to start.
+
 ## Preparing the project
 
 To keep the template small, dependencies are not included. Install them using
