@@ -27,6 +27,15 @@ This template is based on the basic
         * tpl/ - the directory to hold templates
 * tools/ - the build tools to optimize the project and HTTP server.
 
+## Creating a project using volo
+
+To create a project using volo, run:
+
+    volo create my_project_name foxbunny/create-ribcage-app
+
+Volo will take care of installing all dependencies, so you can skip that part
+in the next section.
+
 ## Preparing the project
 
 To keep the template small, dependencies are not included. Install them using
