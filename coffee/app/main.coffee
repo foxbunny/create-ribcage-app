@@ -7,7 +7,7 @@ define (require) ->
   Backbone = require 'backbone'
 
   # Application configuration
-  conf = requrie 'app/conf'
+  conf = require 'app/conf'
 
   # Application state
   state = require 'app/models/state'

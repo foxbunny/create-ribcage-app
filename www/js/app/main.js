@@ -3,7 +3,7 @@ define(function(require) {
   var App, Backbone, app, conf, hello, state, _;
   _ = require('underscore');
   Backbone = require('backbone');
-  conf = requrie('app/conf');
+  conf = require('app/conf');
   state = require('app/models/state');
   hello = require('app/routes/hello');
   App = Backbone.Router.extend({
