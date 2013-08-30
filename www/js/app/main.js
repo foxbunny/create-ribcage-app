@@ -38,6 +38,9 @@ define(function(require) {
     }
   });
   app = new App();
+  app.state.set({
+    started: true
+  });
   Backbone.history.start();
   return app;
 });
