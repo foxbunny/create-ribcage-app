@@ -7,12 +7,15 @@
 
 define (require) ->
   ribcage = require 'ribcage'
+  conf = require 'app/conf'
 
   State = ribcage.models.LocalStorageModel.extend
+    storageKey: 'state'
     default:
       started: false
 
-  state = new State()
+  state = new State id: conf.name
+  state.save null, forceCreate: true
   state.on 'change', () -> state.save()
 
   state
