@@ -3,8 +3,6 @@
 # This module configures the router and starts the application.
 
 define (require) ->
-  _ = require 'underscore'
-
   # Stateful router
   {Router: StatefulRouter} = require 'ribcage/routers/stateful'
 
