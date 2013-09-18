@@ -16,8 +16,6 @@ people who do not want to use CoffeeScript.
 
 * coffee/ - CoffeeScript sources
     * app/ - application modules
-        * models/ - the directory to hold models
-            * state.coffee - application state model
         * routes/ - the directory to hold route handlers
             * hello.coffee - example route handler
         * views/ - the directory to hold views
