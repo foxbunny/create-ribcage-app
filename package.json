@@ -13,7 +13,6 @@
   "devDependencies": {
     "volo": "0.3.0",
     "coffee-script": "1.6.3",
-    "http-server": "*",
-    "http-proxy": "*"
+    "daproxy": "*"
   }
 }
