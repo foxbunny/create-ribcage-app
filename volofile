@@ -16,29 +16,16 @@ module.exports = {
     ]
   },
   compile: {
-    flags: quietFlag,
-    run: function(d, v, namedArgs) {
-      d.resolve(v.spawn(
-        'node',
-        ['node_modules/coffee-script/bin/coffee', '-o', 'www/js', 
-          '-bc', 'coffee'], 
-          useConsole(namedArgs)
-      ));
-    }
+    run: 'n.coffee -bco www/js coffee'
   },
   watch: {
-    flags: quietFlag,
-    run: function(d, v, namedArgs) {
-      d.resolve(v.spawn(
-        'node', 
-        ['node_modules/coffee-script/bin/coffee', '-o', 'www/js', 
-          '-bcw', 'coffee'], 
-          useConsole(namedArgs)
-      ));
-    }
+    run: 'n.coffee -bcwo www/js cofeee'
   },
   serve: {
     run: 'n.proxy -c tools/proxy.json'
+  },
+  docs: {
+    run: 'n.cdoc src doc'
   },
   build: {
     flags: quietFlag,
