@@ -25,7 +25,7 @@ module.exports = {
     run: 'n.proxy -c tools/proxy.json'
   },
   docs: {
-    run: 'n.cdoc src doc'
+    run: 'n.cdoc coffee doc'
   },
   build: {
     flags: quietFlag,
