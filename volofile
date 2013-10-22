@@ -19,7 +19,7 @@ module.exports = {
     run: 'n.coffee -bco www/js coffee'
   },
   watch: {
-    run: 'n.coffee -bcwo www/js cofeee'
+    run: 'n.coffee -bcwo www/js coffee'
   },
   serve: {
     run: 'n.proxy -c tools/proxy.json'
